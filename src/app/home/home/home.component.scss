@@ -1,0 +1,32 @@
+.main-wrapper {
+    display:grid;
+    padding: 50px 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    app-recapitulatif {
+        grid-column: 1;
+        text-align: center;
+    }
+    app-liste-produits {
+        grid-column: 2 / span 3;
+        text-align: center;
+    }
+    app-notice {
+        grid-column: 5;
+        text-align: center;
+    }
+    app-methode-impression {
+        grid-column: 1 / span 5;
+        grid-row: 2;
+        text-align: center;
+    }
+    app-engagements {
+        grid-row: 3;
+        grid-column: 1 / span 5;
+        text-align: center;
+    }
+    app-slider-client {
+        grid-row: 4;
+        grid-column: 1 / span 5;
+        text-align: center;
+    }
+}

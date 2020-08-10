@@ -1,0 +1,51 @@
+@import '../../variable.scss';
+
+.navbar {
+    background: $primaryColor;
+    border-bottom: 3px solid $secondaryColor;
+    padding: 0 16px;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    @media screen and (min-width: 991px){
+        height: auto;
+        flex-direction: initial;
+    }
+    .navbar-toggler{
+        border:0;
+    }
+    .navbar-collapse {
+        padding-left:195px;
+    }
+    img {
+        width: 110px;
+        height: auto;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: black 0px 0px 7px 0px;
+        border: 5px solid white;
+        top:5px;
+        left: calc(50vw - (/* width */110px / 2));
+        @media screen and (min-width: 991px){
+            top: 15px;
+            left:95px;
+        }
+    }
+    .devis {
+        padding: 3px 10px;
+        font-size: 17px;
+        transition: background 0.7s;
+        transform: skew(-20deg);
+        background: #237E72;
+        margin-right: 25px;
+        height: 70px;
+        border-left: 3px solid #285A53;
+        color:white;
+        display: flex;
+        align-items: center;
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
+
+}
