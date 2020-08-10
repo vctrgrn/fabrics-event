@@ -1,0 +1,61 @@
+@import '../../../variable.scss';
+
+.notice {
+    background: white;
+    border:2px solid $primaryColor;
+    padding: 30px 20px 10px 20px;
+    max-width: 288px;
+    .question {
+        position: absolute;
+        top:-20px;
+        border:0;
+        padding: 0;;
+        transform: scale(1);
+        border-radius: 50%;
+        animation: pulse 3s infinite;
+        background: white;
+        cursor: pointer;
+        left:37%;
+    }
+    .title {
+        text-transform: uppercase;
+    }
+
+    .liste-notice {
+        list-style: none;
+        padding:15px 0;
+        .item   {
+            display: flex;
+            justify-content: space-between;
+            .number {
+                border-radius: 50%;
+                width: 50px;
+                height: 26px;
+                color:white;
+                &.first {
+                    background-color: #E5A686;
+                }
+            }
+            p {
+                text-align: left;
+                margin-left: 25px;
+            }
+        }
+    }
+}
+@keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }

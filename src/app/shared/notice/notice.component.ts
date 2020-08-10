@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notice.component.scss']
 })
 export class NoticeComponent implements OnInit {
+  isOpen =  false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  afficherNotice() {
+    this.isOpen = !this.isOpen
+  }
+
+
 
 }
