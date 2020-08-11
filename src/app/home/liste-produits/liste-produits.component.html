@@ -1,1 +1,16 @@
-<p>liste-produits works!</p>
+<div class="main-wrapper">
+   <div *ngIf="firstCategorie" class="first-categorie"> 
+       <app-produit></app-produit>
+   </div>
+    <div class="middle-categories">
+        <div *ngFor="let categorie of listCategoriePhare">
+          <app-produit></app-produit>
+        </div>
+    </div>
+    <div *ngIf="lastCategorie" class="last-categorie">
+        <app-produit></app-produit>
+    </div>
+
+</div>
+
+

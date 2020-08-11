@@ -1,1 +1,20 @@
-@import '../../../variable.scss'
+@import '../../../variable.scss';
+
+.main-wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .first-categorie {
+        flex:1;
+    }
+    .middle-categories {
+        flex:2;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .last-categorie {
+        flex:1;
+    }
+}

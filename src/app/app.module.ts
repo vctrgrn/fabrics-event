@@ -14,6 +14,8 @@ import { NoticeComponent } from './shared/notice/notice.component';
 import { MethodeImpressionComponent } from './home/methode-impression/methode-impression.component';
 import { EngagementsComponent } from './home/engagements/engagements.component';
 import { SliderClientComponent } from './home/slider-client/slider-client.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProduitComponent } from './shared/produit/produit.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,14 @@ import { SliderClientComponent } from './home/slider-client/slider-client.compon
     NoticeComponent,
     MethodeImpressionComponent,
     EngagementsComponent,
-    SliderClientComponent
+    SliderClientComponent,
+    ProduitComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
