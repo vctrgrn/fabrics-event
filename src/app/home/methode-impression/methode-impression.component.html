@@ -1,1 +1,32 @@
-<p>methode-impression works!</p>
+<div class="title-wrapper">
+    <h3 class="printmethods">Méthodes d'impression</h3>
+</div>
+<div class="container-methods">
+    <ng-container *ngFor="let methode of methodeImpressionTop">
+        <div class="flip-card  {{methode.titre}} ">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>{{methode.titre}}</h2>
+                </div>
+                <div class="flip-card-back">
+                    <p class="textshadow">{{methode.text}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<div class="container-methods">
+    <ng-container *ngFor="let methode of methodeImpressionBottom">
+        <div class="flip-card  {{methode.titre}} ">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>{{methode.titre}}</h2>
+                </div>
+                <div class="flip-card-back">
+                    <p class="textshadow">{{methode.text}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
