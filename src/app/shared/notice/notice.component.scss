@@ -6,11 +6,13 @@
         display:flex;
         background: white;
     border:2px solid $primaryColor;
-    padding: 30px 20px 10px 20px;
     position: absolute;
-    width: 265px;
+    width: 90%;
     left:15px;
     top:9px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .question {
         position: absolute;
         top:-20px;
@@ -25,21 +27,38 @@
     }
     .title {
         text-transform: uppercase;
+        padding-top: 35px;
+        padding-bottom: 25px;
+        font-family: "Roboto";
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: $secondaryColor;
     }
 
     .liste-notice {
         list-style: none;
-        padding:15px 0;
+        padding: 0px 20px 10px 20px;
         .item   {
             display: flex;
             justify-content: space-between;
             .number {
                 border-radius: 50%;
-                width: 50px;
-                height: 26px;
+                width: 25px;
+                height: 25px;
                 color:white;
-                &.first {
+                display: flex;
+                justify-content: center;            
+                &.un {
                     background-color: #E5A686;
+                }
+                &.deux {
+                    background-color: #92A4CE;
+                }
+                &.trois {
+                    background-color: #7BD5A2;
+                }
+                &.quatre {
+                    background-color: #E2EC7D;
                 }
             }
             p {
@@ -48,6 +67,18 @@
             }
         }
     }
+
+    .info {
+        background: $primaryColor;
+        display: flex;
+        align-items:  center;
+        justify-content: center;
+        text-align: center;
+        color:white;
+        padding:10px;
+        font-family: "Roboto";
+    }
+
     }
     
 }

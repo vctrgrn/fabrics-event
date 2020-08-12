@@ -1,10 +1,19 @@
-<div class="notice-desktop">
+<div class="notice-desktop z-depth-1-half">
     <button class="question" (click)="afficherNotice()"><img src="../../../assets/images/question.png" alt="" ></button>
     <span class="title">Comment ça marche ?</span>
-    <ul class="liste-notice" *ngIf="isOpen">
-        <li class="item">
-            <span class="number first">1</span>
-            <p>Sélectionnez le ou les produits que vous désirez.</p>
-        </li>
-    </ul>
+    <div *ngIf="isOpen">
+        <ul class="liste-notice" >
+            <li class="item" *ngFor="let item of noticeItem"> 
+                <div>
+                    <span class="number {{item.class}}">{{item.titre}}</span>
+                </div>
+                <div>
+                    <p>{{item.text}}</p>
+                </div>
+            </li>
+        </ul>
+        <div class="info">
+            <span>NOTRE CONSEILLER VOUS CONTACTERA APRES VALIDATION</span>
+        </div>
+    </div>
 </div>

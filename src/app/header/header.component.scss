@@ -28,6 +28,33 @@
             position: initial;
         }
     }
+    .nav-link {
+        color:white;
+        font-family: "Roboto";
+        &:hover {
+            color:$secondaryColor;
+        }
+    }
+
+    .dropdown-menu {
+        border: 3px solid $secondaryColor;
+        background: $secondaryColor;
+        opacity: 0.9;
+        margin-bottom: 15px;
+        @media screen and (min-width: 991px){
+            margin-top:15px;
+            margin-bottom: 0px;
+        }
+        .dropdown-item {
+            opacity: 1;
+            color:white;
+            &:hover {
+                background: $primaryColor;
+                opacity: 1;
+                color: $secondaryColor;
+            }
+        }
+    }
     img {
         width: 110px;
         height: auto;
