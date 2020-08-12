@@ -9,11 +9,20 @@ export class ProduitComponent implements OnInit {
   @Input()
   nomCategorie: string;
   @Input()
+  optionalClass: string;
+  @Input()
   image: string;
+  urlImage;
+  imagePath='../../../assets/images/'
 
   constructor() { }
 
   ngOnInit(): void {
+    this.urlImage = this.imagePath + this.image;
+  }
+
+  getSrcImage() : string {
+      return '../../assets/images/' + this.image
   }
 
 }

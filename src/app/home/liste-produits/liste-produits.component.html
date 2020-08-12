@@ -1,16 +1,27 @@
+<div class="title-wrapper">
+    <h3 class="listeProducts">Nos produits phares</h3>
+</div>
 <div class="main-wrapper">
    <div *ngIf="firstCategorie" class="first-categorie"> 
-       <app-produit></app-produit>
+       <app-produit [image]=firstCategorie.nomImage [nomCategorie]="firstCategorie.title"> </app-produit>
    </div>
     <div class="middle-categories">
-        <div *ngFor="let categorie of listCategoriePhare">
-          <app-produit></app-produit>
+        <div class="middle-top">
+            <div *ngFor="let categorie of middleCategorieTop" class="middle-top">
+                <app-produit optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+              </div>
+        </div>
+        <div class="middle-bottom">
+            <div *ngFor="let categorie of middleCategorieBottom" class="middle-bottom">
+                <app-produit optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+              </div>
         </div>
     </div>
     <div *ngIf="lastCategorie" class="last-categorie">
-        <app-produit></app-produit>
+        <app-produit [image]=lastCategorie.nomImage [nomCategorie]="lastCategorie.title"></app-produit>
     </div>
-
 </div>
+
+<hr>
 
 

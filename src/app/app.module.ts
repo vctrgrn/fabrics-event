@@ -16,6 +16,7 @@ import { EngagementsComponent } from './home/engagements/engagements.component';
 import { SliderClientComponent } from './home/slider-client/slider-client.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProduitComponent } from './shared/produit/produit.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ProduitComponent } from './shared/produit/produit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

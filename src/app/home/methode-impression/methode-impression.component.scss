@@ -19,9 +19,12 @@
         display: inline-block;
         width:100%;
         letter-spacing: 0;
+        font-family: "Roboto";
+        letter-spacing: 5px;
+        text-transform: lowercase;
         text-align: left;
         color: #285a53;
-        width:350px;
+        width: 865px;
         padding-bottom: 10px;
       }
       
@@ -38,7 +41,7 @@
     align-items: center;
     margin:auto;
     @media screen and (min-width: 991px){
-        max-width: 800px;
+        max-width: 865px;
         flex-direction: row;
         margin:auto;
     }
