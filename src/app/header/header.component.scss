@@ -15,11 +15,22 @@
         border:0;
     }
     .navbar-collapse {
-        padding-left:195px;
+        background: #4ba593;
+        z-index: 1;
+        top: 60px;
+        position: absolute;
+        padding: 20px 20px 20px;
+        left: 0px;
+        right: 0;
+        @media screen and (min-width: 991px){
+            padding-left:195px;
+            position: initial;
+        }
     }
     img {
         width: 110px;
         height: auto;
+        z-index: 100;
         position: absolute;
         border-radius: 50%;
         box-shadow: black 0px 0px 7px 0px;
@@ -34,18 +45,23 @@
     .devis {
         padding: 3px 10px;
         font-size: 17px;
-        transition: background 0.7s;
-        transform: skew(-20deg);
         background: #237E72;
-        margin-right: 25px;
         height: 70px;
         border-left: 3px solid #285A53;
         color:white;
         display: flex;
         align-items: center;
-        &:hover {
-            background-color: $secondaryColor;
+        @media screen and (min-width: 991px){
+            top: 15px;
+            left:95px;
+            margin-right: 25px;
+            transition: background 0.7s;
+            transform: skew(-20deg);
+            &:hover {
+                background-color: $secondaryColor;
+            }
         }
+
     }
 
 }

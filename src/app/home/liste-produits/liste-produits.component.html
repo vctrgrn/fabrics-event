@@ -1,6 +1,4 @@
-<div class="title-wrapper">
-    <h3 class="listeProducts">Nos produits phares</h3>
-</div>
+<app-titre titre="Nos produits phare"></app-titre>
 <div class="main-wrapper">
    <div *ngIf="firstCategorie" class="first-categorie"> 
        <app-produit [image]=firstCategorie.nomImage [nomCategorie]="firstCategorie.title"> </app-produit>
@@ -12,7 +10,7 @@
               </div>
         </div>
         <div class="middle-bottom">
-            <div *ngFor="let categorie of middleCategorieBottom" class="middle-bottom">
+            <div *ngFor="let categorie of middleCategorieBottom" class="">
                 <app-produit optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
               </div>
         </div>

@@ -1,34 +1,25 @@
 .main-wrapper {
-    display:grid;
-    padding: 50px 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    app-recapitulatif {
-        grid-column: 1;
-        text-align: center;
+
+    @media screen and(min-width:1024px) {
+        display:grid;
+        padding: 50px 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        max-width: 1440px;
+        margin:auto;
+        app-recapitulatif {
+            grid-column: 1;
+            text-align: center;
+        }
+        .coulee {
+            grid-column: 2 / span 3;
+            max-width: 100%;
+            margin:auto;
+        }
+
+        app-notice {
+            grid-column: 5;
+            position: relative;
+        }
     }
-    app-liste-produits {
-        grid-column: 2 / span 3;
-        text-align: center;
-    }
-    app-notice {
-        grid-column: 5;
-        text-align: center;
-        padding: 0 20px 0 0;
-        position: relative;
-    }
-    app-methode-impression {
-        grid-column: 1 / span 5;
-        grid-row: 2;
-        text-align: center;
-    }
-    app-engagements {
-        grid-row: 3;
-        grid-column: 1 / span 5;
-        text-align: center;
-    }
-    app-slider-client {
-        grid-row: 4;
-        grid-column: 1 / span 5;
-        text-align: center;
-    }
+
 }

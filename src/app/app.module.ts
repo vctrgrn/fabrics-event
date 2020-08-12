@@ -17,6 +17,7 @@ import { SliderClientComponent } from './home/slider-client/slider-client.compon
 import { HttpClientModule } from '@angular/common/http';
 import { ProduitComponent } from './shared/produit/produit.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { TitreComponent } from './shared/titre/titre.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MethodeImpressionComponent,
     EngagementsComponent,
     SliderClientComponent,
-    ProduitComponent
+    ProduitComponent,
+    TitreComponent
     
   ],
   imports: [
