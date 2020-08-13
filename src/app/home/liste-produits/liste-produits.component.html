@@ -6,17 +6,17 @@
     <div class="middle-categories">
         <div class="middle-top">
             <div *ngFor="let categorie of middleCategorieTop" class="middle-top">
-                <app-produit optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+                <app-produit (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
               </div>
         </div>
         <div class="middle-bottom">
             <div *ngFor="let categorie of middleCategorieBottom" class="">
-                <app-produit optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+                <app-produit (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
               </div>
         </div>
     </div>
     <div *ngIf="lastCategorie" class="last-categorie">
-        <app-produit [image]=lastCategorie.nomImage [nomCategorie]="lastCategorie.title"></app-produit>
+        <app-produit (click)="goToListeProduitByCategorie(lastCategorie)" [image]=lastCategorie.nomImage [nomCategorie]="lastCategorie.title"></app-produit>
     </div>
 </div>
 
