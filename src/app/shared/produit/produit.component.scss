@@ -16,3 +16,37 @@
         font-weight: bold;
     }
 }
+
+.mask {
+    display: flex;
+    flex-direction: column;
+    &.active {
+        opacity: 1;
+        hr {
+            height: 2px;
+            background: white;
+            width: 80%;
+        }
+        i {
+            font-size:30px;
+            color:white;
+        }
+    }
+}
+
+.couleurs-wrapper {
+    display:flex;
+    background:rgb(212, 212, 212);
+    opacity:0.9;
+    padding:14px;
+    justify-content: space-between;
+    border:2px solid #285A53;
+    border-top:0;
+    margin:0 15px;
+    .card-couleur {
+        height: 20px;
+        opacity: 1;
+        width: 20px;
+        
+    }
+}

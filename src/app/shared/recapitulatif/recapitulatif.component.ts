@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecapitulatifService } from '../service/recapitulatif.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-recapitulatif',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecapitulatifComponent implements OnInit {
 
-  constructor() { }
+  asideVisible: boolean;
+
+  constructor(public recapService: RecapitulatifService) {
+    this.asideVisible = recapService.isProducts;
+   }
 
   ngOnInit(): void {
+
   }
 
+  isSidebarVisible(): boolean {
+    return this.recapService.isProducts;
+  }
 }
+
+
+
+
+  
+
+
+
+
+
+
