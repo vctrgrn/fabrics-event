@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategorieService } from 'src/app/shared/service/categorie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-produits',
@@ -13,7 +14,7 @@ export class ListeProduitsComponent implements OnInit {
   firstCategorie;
   lastCategorie;
 
-  constructor(private coategorieService: CategorieService) { }
+  constructor(private coategorieService: CategorieService, private router: Router) { }
 
   ngOnInit(): void {
     this.coategorieService.getCategories().subscribe(
@@ -47,6 +48,11 @@ export class ListeProduitsComponent implements OnInit {
         this.lastCategorie = this.listCategoriePhare[0];
         this.listCategoriePhare.splice(0,1);
 
+    }
+
+    goToListeProduitByCategorie(categ) {
+      console.log(categ.id);
+        this.router.navigate(['categorie', {idCategorie: categ.id, nomCategorie: categ.title}]);
     }
 
 

@@ -2,7 +2,7 @@
 
 .notice-desktop {
     display:none;
-    @media screen and(min-width:1440px){
+    @media screen and(min-width:1200px){
         display:flex;
         background: white;
     border:2px solid $primaryColor;
@@ -32,6 +32,7 @@
         font-family: "Roboto";
         font-weight: 900;
         letter-spacing: 2px;
+        font-size: 13px;
         color: $secondaryColor;
     }
     .liste-notice {

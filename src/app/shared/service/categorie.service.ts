@@ -13,5 +13,5 @@ export class CategorieService {
 
   public getCategories(): Observable<any> {
     return this.httpClient.get<Observable<any>>('http://localhost:3000/categories');
-}
+  }
 }

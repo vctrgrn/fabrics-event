@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProduitComponent } from './shared/produit/produit.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TitreComponent } from './shared/titre/titre.component';
+import { PageListeProduitsComponent } from './listeProduits/page-liste-produits/page-liste-produits.component';
+import { ListeCouleursComponent } from './listeProduits/liste-couleurs/liste-couleurs.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TitreComponent } from './shared/titre/titre.component';
     EngagementsComponent,
     SliderClientComponent,
     ProduitComponent,
-    TitreComponent
+    TitreComponent,
+    PageListeProduitsComponent,
+    ListeCouleursComponent
     
   ],
   imports: [

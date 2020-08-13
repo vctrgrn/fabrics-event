@@ -1,17 +1,31 @@
 {
   "categories": [
-    { "id": 1, "type": 1, "title": "Sweats", "nomImage": "tee-shirt.jpg"},
-    { "id": 2, "type": 1, "title": "Autres", "nomImage": "sweat.png"},
+    { "id": 1, "type": 1, "title": "Sweats", "nomImage": "sweat.png"},
+    { "id": 2, "type": 1, "title": "Autres", "nomImage": "autre.png"},
     { "id": 3, "type": 1, "title": "Bonnets", "nomImage": "bonnet.png"},
-    { "id": 4, "type": 1, "title": "CategPhare", "nomImage": "sweat.png"},
-    { "id": 5, "type": 1, "title": "CategPhare", "nomImage": "sweat.png"},
+    { "id": 4, "type": 1, "title": "CategPhare", "nomImage": "autre.png"},
+    { "id": 5, "type": 1, "title": "CategPhare", "nomImage": "autre.png"},
     { "id": 6, "type": 1, "title": "CategPhare", "nomImage": "autre.png"},
-    { "id": 4, "type": 2, "title": "Categ"},
-    { "id": 5, "type": 2, "title": "Categ"},
-    { "id": 6, "type": 2, "title": "categ"}
+    { "id": 7, "type": 2, "title": "Categ"},
+    { "id": 8, "type": 2, "title": "Categ"},
+    { "id": 9, "type": 2, "title": "categ"}
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "produits": [
+    { "id": 1, "id_Categorie": 1, "title": "Sweat1", "nomImage": "sweat.png", "couleurs": [1,2,3] },
+    { "id": 2, "id_Categorie": 1, "title": "Sweat2", "nomImage": "sweat.png" , "couleurs": [1,2,4]},
+    { "id": 3, "id_Categorie": 1, "title": "Sweat3", "nomImage": "sweat.png", "couleurs": [1,2,5] },
+    { "id": 4, "id_Categorie": 2, "title": "Autre1", "nomImage": "sweat.png", "couleurs": [1,3,4] },
+    { "id": 5, "id_Categorie": 2, "title": "Autre2", "nomImage": "sweat.png", "couleurs": [1,3,5] },
+    { "id": 6, "id_Categorie": 3, "title": "Bonnet1", "nomImage": "sweat.png" , "couleurs": [2,3,4]},
+    { "id": 7, "id_Categorie": 4, "title": "CategPhare1", "nomImage": "sweat.png" , "couleurs": [2,3,5]},
+    { "id": 8, "id_Categorie": 5, "title": "CategPhareBis", "nomImage": "sweat.png", "couleurs": [3,4,5] }
+  ],
+  "couleurs": [
+    {"id": 1, "couleur": "#4ba593"},
+    {"id": 2, "couleur": "#285A53"},
+    {"id": 3, "couleur": "#ffffff"},
+    {"id": 4, "couleur": "#000000"},
+    {"id": 5, "couleur": "#F1F1F5"}
   ],
   "profile": { "name": "typicode" }
 }
