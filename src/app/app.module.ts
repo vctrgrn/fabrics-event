@@ -19,6 +19,7 @@ import { ProduitComponent } from './shared/produit/produit.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TitreComponent } from './shared/titre/titre.component';
 import { PageListeProduitsComponent } from './listeProduits/page-liste-produits/page-liste-produits.component';
+import { ListeCouleursComponent } from './listeProduits/liste-couleurs/liste-couleurs.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PageListeProduitsComponent } from './listeProduits/page-liste-produits/
     SliderClientComponent,
     ProduitComponent,
     TitreComponent,
-    PageListeProduitsComponent
+    PageListeProduitsComponent,
+    ListeCouleursComponent
     
   ],
   imports: [

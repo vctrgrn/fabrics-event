@@ -11,7 +11,11 @@ export class ProduitComponent implements OnInit {
   @Input()
   optionalClass: string;
   @Input()
+  listColor;
+  @Input()
   image: string;
+  @Input()
+  view: string;
   urlImage;
   imagePath='../../../assets/images/'
 
