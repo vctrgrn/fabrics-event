@@ -1,0 +1,32 @@
+.main-wrapper {
+    .coulee {
+        @media screen and(min-width:768px) {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    @media screen and(min-width:1024px) {
+        display:grid;
+        padding: 50px 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        max-width: 1440px;
+        margin:auto;
+        app-recapitulatif {
+            grid-column: 1;
+            text-align: center;
+        }
+        .coulee {
+            grid-column: 2 / span 3;
+            max-width: 100%;
+            width: inherit;
+            margin:auto;
+        }
+
+        app-notice {
+            grid-column: 5;
+            position: relative;
+        }
+    }
+
+}
