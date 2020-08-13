@@ -8,14 +8,15 @@ import { ProduitService } from 'src/app/shared/service/produit.service';
   styleUrls: ['./page-liste-produits.component.scss']
 })
 export class PageListeProduitsComponent implements OnInit {
-  categorie;
+  idCategorie;
+  nomCategorie;
   listProduitByCategorie = []
 
   constructor(private route: ActivatedRoute, private produitService: ProduitService) { }
 
   ngOnInit(): void {
-   this.categorie = this.route.snapshot.paramMap.get('categorie');
-   console.log(this.categorie)
+   this.idCategorie = this.route.snapshot.paramMap.get('idCategorie');
+   this.nomCategorie = this.route.snapshot.paramMap.get('nomCategorie');
     this.produitService.getProduitByCategorie().subscribe(
       data => {
           this.preparerDonneesPourAffichage(data);
@@ -28,7 +29,7 @@ export class PageListeProduitsComponent implements OnInit {
 
   preparerDonneesPourAffichage(data) {
     for(let produit of data) {
-      if(produit.id_Categorie == this.categorie) {
+      if(produit.id_Categorie == this.idCategorie) {
         this.listProduitByCategorie.push(produit);
       }
     }

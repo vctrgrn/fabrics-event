@@ -1,5 +1,19 @@
 .main-wrapper {
     .coulee {
+        .produit-wrapper {
+            display:flex;
+            flex-direction:column;
+            @media screen and(min-width:768px) {
+                flex-direction:row;
+                app-produit + app-produit {
+                    margin-left:15px;
+                    margin-top:0 !important;
+                }
+            }
+            app-produit + app-produit {
+                margin-top:15px;
+            }
+        }
         @media screen and(min-width:768px) {
             width: 90%;
             margin: auto;
@@ -21,6 +35,7 @@
             max-width: 100%;
             width: inherit;
             margin:auto;
+
         }
 
         app-notice {
