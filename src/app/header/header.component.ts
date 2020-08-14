@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategorieService } from '../shared/service/categorie.service';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ export class HeaderComponent implements OnInit {
   listCategoriePhare = [];
   listeCategAutre = [];
 
-  constructor(private coategorieService: CategorieService) { }
+  constructor(private coategorieService: CategorieService, private router: Router) { }
 
   ngOnInit(): void {
     this.coategorieService.getCategories().subscribe(
@@ -30,6 +32,10 @@ export class HeaderComponent implements OnInit {
             this.listeCategAutre.push(item);
         }
       }
+    }
+
+    goHome() {
+      this.router.navigate(['']);
     }
 
 

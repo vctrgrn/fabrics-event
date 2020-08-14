@@ -37,14 +37,16 @@ export class ProduitComponent implements OnInit {
 
   ngOnInit(): void {
     this.urlImage = this.imagePath + this.image;
-    this.couleursService.getCouleurs().subscribe(
-      data => {
-        this.preparerDonneesPourAffichage(data);
-      }, 
-      error => {{}
-
-      }
-    )
+    if(this.view != 'home') {
+      this.couleursService.getCouleurs().subscribe(
+        data => {
+          this.preparerDonneesPourAffichage(data);
+        }, 
+        error => {{}
+  
+        }
+      )
+    }
   }
   preparerDonneesPourAffichage(data) {
     let listColorTmp = data;

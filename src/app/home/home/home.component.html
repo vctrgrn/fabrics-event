@@ -1,10 +1,25 @@
 <div class="main-wrapper">
     <app-recapitulatif></app-recapitulatif>
     <div class="coulee">
-        <app-liste-produits></app-liste-produits>
-        <app-methode-impression></app-methode-impression>
-        <app-engagements></app-engagements>
-        <app-slider-client></app-slider-client>
+        <ng-container *ngIf="idCategorie then casListeProduit; else casHome"></ng-container>
     </div>
     <app-notice></app-notice>
 </div>
+
+<ng-template #casHome>
+    <app-liste-produits></app-liste-produits>
+    <app-methode-impression></app-methode-impression>
+    <app-engagements></app-engagements>
+    <app-slider-client></app-slider-client>
+</ng-template>
+<ng-template #casListeProduit>
+    <app-titre titre="Tous nos {{nomCategorie}}"></app-titre>
+    <div class="produit-wrapper">
+        <ng-container *ngFor="let produit of listProduitByCategorie">
+            <app-produit         
+            [listColor]="produit.couleurs" 
+            [image]=produit.nomImage 
+            [nomCategorie]="produit.title"></app-produit>
+        </ng-container>
+    </div>
+</ng-template>

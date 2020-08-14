@@ -4,7 +4,6 @@ import { TemplateGeneriqueComponent } from './template-generique/template-generi
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
-import { PageListeProduitsComponent } from './listeProduits/page-liste-produits/page-liste-produits.component';
 
 
 const routes: Routes = [
@@ -18,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: 'categorie',
-        component: PageListeProduitsComponent
+        component: HomeComponent
       }
     ]
   }

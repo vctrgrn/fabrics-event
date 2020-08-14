@@ -52,7 +52,7 @@ export class ListeProduitsComponent implements OnInit {
 
     goToListeProduitByCategorie(categ) {
       console.log(categ.id);
-        this.router.navigate(['categorie', {idCategorie: categ.id, nomCategorie: categ.title}]);
+        this.router.navigate(['categorie', {'?': categ.id, '&': categ.title}]);
     }
 
 
