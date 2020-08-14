@@ -1,4 +1,10 @@
 <div class="recap" *ngIf="isSidebarVisible()">
-    <ng-container *ngFor="let produit of getRecap()">{{produit.produit}} - {{produit.couleur}} <button (click)="removeProduit(produit)">SUPPR</button></ng-container>
+    <ng-container *ngFor="let produit of getRecap()">
+        <div class="product-wrapper">
+            <span>{{produit.produit}}</span>
+            <span>- {{produit.couleur}} </span>
+            <button (click)="removeProduit(produit)">SUPPR</button>
+        </div>
+    </ng-container>
 </div>
 

@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProduitComponent } from './shared/produit/produit.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TitreComponent } from './shared/titre/titre.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { TitreComponent } from './shared/titre/titre.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NgbModule,
+    Ng5SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

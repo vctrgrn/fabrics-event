@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { CouleursService } from '../service/couleurs.service';
 import { RecapitulatifService } from '../service/recapitulatif.service';
+import { FormControl } from '@angular/forms';
+import { Options } from 'ng5-slider/options';
 
 @Component({
   selector: 'app-produit',
@@ -32,6 +34,15 @@ export class ProduitComponent implements OnInit {
   colorSelectionne = false;
   quantitySelectionne = false;
   listhexaCode = [];
+
+  value: number = 100;
+  options: Options = {
+    floor: 0,
+    ceil: 100,
+    showTicks: true,
+    tickStep: 10
+  };
+
 
   constructor(private couleursService: CouleursService, private recapService: RecapitulatifService) { }
 

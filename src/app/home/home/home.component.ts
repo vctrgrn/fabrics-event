@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecapitulatifService } from 'src/app/shared/service/recapitulatif.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProduitService } from 'src/app/shared/service/produit.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,8 @@ export class HomeComponent implements OnInit {
   asideVisible: boolean;
   isAdd = false;
   recap = {};
+
+  ageControl = new FormControl();
 
   constructor(private route: ActivatedRoute, private produitService: ProduitService, private recapService: RecapitulatifService) { 
     this.asideVisible = recapService.isProducts;
