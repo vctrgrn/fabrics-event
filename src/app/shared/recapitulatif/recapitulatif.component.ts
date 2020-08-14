@@ -28,6 +28,10 @@ export class RecapitulatifComponent implements OnInit {
     return this.recapService.recap;
   }
 
+  removeProduit(produit) {
+    this.recapService.removeProduct(produit);
+  }
+
 }
 
 

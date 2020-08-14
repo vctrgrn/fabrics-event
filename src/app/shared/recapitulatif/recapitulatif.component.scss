@@ -1,6 +1,15 @@
+@import '../../../variable.scss';
+
 .recap {
     display:none;
     @media screen and(min-width:1440px){
-        display:block;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border:2px solid $primaryColor;
+        position: absolute;
+        width: 90%;
+        left:15px;
+        top:9px;
     }
 }

@@ -6,6 +6,7 @@ import { Subject, BehaviorSubject, Observable, of } from 'rxjs';
 })
 export class RecapitulatifService {
 
+
   isProducts = false;
   recap = []
 
@@ -25,12 +26,11 @@ export class RecapitulatifService {
   public addProduct(produit) {
     this.recap.push(produit);
     this.recapSubject.next(this.recap);
-    console.log(this.recap);
     this.toggleRecapVisibility();
   }
 
   public removeProduct(produit) {
-    this.recap = this.recap.filter(item => item !== produit);
+    this.recap = this.recap.filter(item => item.id !== produit.id);
     this.recapSubject.next(this.recap);
     this.toggleRecapVisibility();
   }
@@ -39,8 +39,8 @@ export class RecapitulatifService {
     this.recapSubject.next(this.recap);
   }
 
+
   public toggleRecapVisibility() {
-    console.log(this.recap.length)
     if(this.recap.length > 0 ) {
       this.isProducts = true;
       this.isProductsVisibilityChange.next(this.isProducts);

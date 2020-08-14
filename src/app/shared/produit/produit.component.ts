@@ -19,6 +19,13 @@ export class ProduitComponent implements OnInit {
   @Input()
   view: string;
 
+  produitForRecap = {
+    'id': null,
+    'produit': null,
+    'couleur': null,
+    'quantite': null
+  }
+
   urlImage;
   imagePath='../../../assets/images/'
   isSelectionne = false;
@@ -62,20 +69,36 @@ export class ProduitComponent implements OnInit {
   selectionneProduit(produit) {
     if(!this.isSelectionne) {
       this.isSelectionne = true;
-      this.recapService.addProduct(produit);
+      this.produitForRecap.produit = produit;
     } else {
       this.isSelectionne = false;
-      this.recapService.removeProduct(produit);
+      this.colorSelectionne = false;
+      this.recapService.removeProduct(this.produitForRecap);
+      
     }
   }
 
   selectionneCouleur(couleur) {
     if(!this.colorSelectionne) {
       this.colorSelectionne = true;
+      this.produitForRecap.couleur = couleur.couleur
+      this.produitForRecap.id = this.produitForRecap.produit + this.produitForRecap.couleur;
+      this.recapService.addProduct(this.produitForRecap)
+      this.resetView();
     } else {
       this.colorSelectionne = false;
     }
   }
 
-
+resetView() {
+  this.isSelectionne = false;
+  this.colorSelectionne = false;
+  this.quantitySelectionne = false;
+  this.produitForRecap = {
+    'id': null,
+    'produit': null,
+    'couleur': null,
+    'quantite': null
+  }
+}
 }

@@ -40,20 +40,33 @@
 
 .couleurs-wrapper {
     display:flex;
-    background:rgb(212, 212, 212);
+    flex-direction: column;
+    background:white;
     opacity:0.9;
     padding:14px;
+    align-items: center;
     justify-content: space-between;
     border:2px solid #285A53;
     border-top:0;
     margin:0 15px;
+    .list-color {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top:5px;
+    }
     .card-couleur {
         height: 20px;
         opacity: 1;
+        border: 1px solid black;
         width: 20px;    
         cursor:pointer;
     }
+    .card-couleur + .card-couleur {
+        margin-left: 5px;
+    }
     &.active {
         background-color: rgba(0, 0, 0, 0.7);
+        color:white;
     }
 }

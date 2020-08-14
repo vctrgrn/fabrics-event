@@ -18,9 +18,12 @@
             <i *ngIf="isSelectionne" class="fas fa-check-circle"></i>
         </div>
     </div>
-    <div class="couleurs-wrapper animate__animated animate__slideInDown {{colorSelectionne ? 'active' : ''}}" *ngIf="isSelectionne">
-        <ng-container *ngFor="let color of listhexaCode">
-            <div (click)="selectionneCouleur(color)" class="card-couleur z-depth-1-half" [style.background]="color.couleur"> </div>
-        </ng-container>
+    <div class="couleurs-wrapper z-depth-1-half animate__animated animate__slideInDown {{colorSelectionne ? 'active' : ''}}" *ngIf="isSelectionne">
+        <div>Couleurs disponible</div>
+        <div class="list-color">
+            <ng-container *ngFor="let color of listhexaCode">
+                <div (click)="selectionneCouleur(color)" class="card-couleur z-depth-1-half" [style.background]="color.couleur"> </div>
+            </ng-container>
+        </div>
     </div>
 </ng-template>
