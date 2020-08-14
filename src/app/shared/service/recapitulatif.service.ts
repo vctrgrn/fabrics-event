@@ -30,11 +30,14 @@ export class RecapitulatifService {
   }
 
   public removeProduct(produit) {
-    this.recap = this.recap.filter(item => item.id !== produit.id);
+    this.recap = this.recap.filter(item => item !== produit);
     this.recapSubject.next(this.recap);
     this.toggleRecapVisibility();
   }
 
+  public getRecap() {
+    this.recapSubject.next(this.recap);
+  }
 
   public toggleRecapVisibility() {
     console.log(this.recap.length)

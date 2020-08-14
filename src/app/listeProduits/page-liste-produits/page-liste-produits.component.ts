@@ -43,19 +43,8 @@ export class PageListeProduitsComponent implements OnInit {
     }
   }
 
-  addProduitToRecap(produit) {
 
-  }
 
-toggleRecap(produit) {
-  if(!produit.isAdd) {
-    produit.isAdd = true;
-    this.recapService.addProduct(produit);
-  } else {
-    produit.isAdd = false;
-    this.recapService.removeProduct(produit);
-  }
-}
 
 
 }

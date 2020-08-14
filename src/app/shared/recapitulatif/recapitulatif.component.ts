@@ -10,18 +10,24 @@ import { Subscription } from 'rxjs';
 export class RecapitulatifComponent implements OnInit {
 
   asideVisible: boolean;
+  recap= []
 
   constructor(public recapService: RecapitulatifService) {
     this.asideVisible = recapService.isProducts;
+    this.recap = this.getRecap();
    }
 
   ngOnInit(): void {
-
   }
 
   isSidebarVisible(): boolean {
     return this.recapService.isProducts;
   }
+
+  getRecap() : any {
+    return this.recapService.recap;
+  }
+
 }
 
 

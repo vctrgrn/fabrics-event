@@ -4,8 +4,7 @@
         <app-titre titre="Tous nos {{nomCategorie}}"></app-titre>
         <div class="produit-wrapper">
             <ng-container *ngFor="let produit of listProduitByCategorie">
-                <app-produit 
-                (click)="toggleRecap(produit)"
+                <app-produit         
                 [listColor]="produit.couleurs" 
                 [image]=produit.nomImage 
                 [nomCategorie]="produit.title"></app-produit>

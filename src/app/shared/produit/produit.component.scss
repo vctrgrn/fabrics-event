@@ -17,6 +17,10 @@
     }
 }
 
+.view {
+    z-index:10;
+}
+
 .mask {
     display: flex;
     flex-direction: column;
@@ -46,7 +50,10 @@
     .card-couleur {
         height: 20px;
         opacity: 1;
-        width: 20px;
-        
+        width: 20px;    
+        cursor:pointer;
+    }
+    &.active {
+        background-color: rgba(0, 0, 0, 0.7);
     }
 }

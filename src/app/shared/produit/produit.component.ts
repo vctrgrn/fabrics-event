@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { CouleursService } from '../service/couleurs.service';
+import { RecapitulatifService } from '../service/recapitulatif.service';
 
 @Component({
   selector: 'app-produit',
@@ -17,12 +18,15 @@ export class ProduitComponent implements OnInit {
   image: string;
   @Input()
   view: string;
+
   urlImage;
   imagePath='../../../assets/images/'
   isSelectionne = false;
+  colorSelectionne = false;
+  quantitySelectionne = false;
   listhexaCode = [];
 
-  constructor(private couleursService: CouleursService) { }
+  constructor(private couleursService: CouleursService, private recapService: RecapitulatifService) { }
 
   ngOnInit(): void {
     this.urlImage = this.imagePath + this.image;
@@ -30,7 +34,7 @@ export class ProduitComponent implements OnInit {
       data => {
         this.preparerDonneesPourAffichage(data);
       }, 
-      error => {
+      error => {{}
 
       }
     )
@@ -54,5 +58,24 @@ export class ProduitComponent implements OnInit {
   selectionneItem() {
       this.isSelectionne = !this.isSelectionne;
   }
+
+  selectionneProduit(produit) {
+    if(!this.isSelectionne) {
+      this.isSelectionne = true;
+      this.recapService.addProduct(produit);
+    } else {
+      this.isSelectionne = false;
+      this.recapService.removeProduct(produit);
+    }
+  }
+
+  selectionneCouleur(couleur) {
+    if(!this.colorSelectionne) {
+      this.colorSelectionne = true;
+    } else {
+      this.colorSelectionne = false;
+    }
+  }
+
 
 }

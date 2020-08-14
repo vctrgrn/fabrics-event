@@ -10,7 +10,7 @@
 </ng-template>
 
 <ng-template #casProduit>
-    <div class="view overlay produit z-depth-1-half" (click)="selectionneItem()">
+    <div class="view overlay produit z-depth-1-half" (click)="selectionneProduit(nomCategorie)">
         <img src='{{urlImage}}' class="img-fluid {{optionalClass}}" alt="smaple image">
         <div class="mask flex-center {{isSelectionne ? 'active rgba-black-strong' : 'rgba-black-light'}}">
             <p class="white-text">{{nomCategorie}}</p>
@@ -18,9 +18,9 @@
             <i *ngIf="isSelectionne" class="fas fa-check-circle"></i>
         </div>
     </div>
-    <div class="couleurs-wrapper">
+    <div class="couleurs-wrapper animate__animated animate__slideInDown {{colorSelectionne ? 'active' : ''}}" *ngIf="isSelectionne">
         <ng-container *ngFor="let color of listhexaCode">
-            <div class="card-couleur z-depth-1-half" [style.background]="color.couleur"> </div>
+            <div (click)="selectionneCouleur(color)" class="card-couleur z-depth-1-half" [style.background]="color.couleur"> </div>
         </ng-container>
     </div>
 </ng-template>
