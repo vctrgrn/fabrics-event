@@ -14,6 +14,7 @@ export class MethodeImpressionComponent implements OnInit {
     {
       'titre': 'flex',
       'text' : 'Motif imprimé sur une feuille, découpé puis pressé à chaud sur le textile. Couleurs plus resplendissantes, colle appliquée sur le rebord de l’impression. Idéal pour une quantité moyenne.'
+      
     }, 
     {
       'titre': 'serigraphie',

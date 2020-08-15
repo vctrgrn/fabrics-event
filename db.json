@@ -1,11 +1,11 @@
 {
   "categories": [
     { "id": 1, "type": 1, "title": "T-Shirts", "nomImage": "tshirts.png"},
-    { "id": 2, "type": 1, "title": "Autres", "nomImage": "tasses.png"},
-    { "id": 3, "type": 1, "title": "Bonnets", "nomImage": "tshirts.png"},
-    { "id": 4, "type": 1, "title": "Sacs", "nomImage": "sacs.png"},
-    { "id": 5, "type": 1, "title": "Tasses", "nomImage": "tasses.png"},
-    { "id": 6, "type": 1, "title": "CategPhare", "nomImage": "sweats.png"},
+    { "id": 2, "type": 1, "title": "Tasses", "nomImage": "tasses.png"},
+    { "id": 3, "type": 1, "title": "Autres", "nomImage": "sweats.png"},
+    { "id": 4, "type": 1, "title": "Sweats", "nomImage": "sacs.png"},
+    { "id": 5, "type": 1, "title": "Casquettes", "nomImage": "casquettes.png"},
+    { "id": 6, "type": 1, "title": "Sweats", "nomImage": "autres.png"},
     { "id": 7, "type": 2, "title": "Categ"},
     { "id": 8, "type": 2, "title": "Categ"},
     { "id": 9, "type": 2, "title": "categ"}

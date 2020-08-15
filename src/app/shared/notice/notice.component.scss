@@ -1,10 +1,14 @@
 @import '../../../variable.scss';
 
+
+
+
 .notice-desktop {
     display:none;
     @media screen and(min-width:1200px){
-        display:flex;
-        background: white;
+    display:flex;
+    background: white;
+    visibility: unset;;
     border:2px solid $primaryColor;
     position: absolute;
     width: 80%;
@@ -15,6 +19,8 @@
     flex-direction: column;
     .question {
         position: absolute;
+        display: bloc;
+        visibility: inherit;;
         top:-20px;
         border:0;
         padding: 0;;
@@ -29,9 +35,8 @@
         text-transform: uppercase;
         padding-top: 35px;
         padding-bottom: 25px;
-        font-family: "Roboto";
+        font-family: 'Quicksand', sans-serif;
         font-weight: 900;
-        letter-spacing: 2px;
         font-size: 13px;
         color: $secondaryColor;
     }

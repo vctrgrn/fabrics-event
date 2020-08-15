@@ -3,24 +3,17 @@
 </div>
 
 <div class="main-wrapper">
-   <div *ngIf="firstCategorie" class="first-categorie"> 
-       <app-produit view="home" [image]=firstCategorie.nomImage [nomCategorie]="firstCategorie.title" (click)="goToListeProduitByCategorie(firstCategorie)"> </app-produit>
-   </div>
-    <div class="middle-categories">
-        <div class="middle-top">
-            <div *ngFor="let categorie of middleCategorieTop" class="middleTop">
-                <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
-              </div>
-        </div>
-        <div class="middle-bottom">
-            <div *ngFor="let categorie of middleCategorieBottom" class="middleBottom">
-                <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
-              </div>
-        </div>
+    <div class="wrapper-top">
+        <ng-container *ngFor="let categorie of listTop">
+            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+        </ng-container>
     </div>
-    <div *ngIf="lastCategorie" class="last-categorie">
-        <app-produit view="home" (click)="goToListeProduitByCategorie(lastCategorie)" [image]=lastCategorie.nomImage [nomCategorie]="lastCategorie.title"></app-produit>
+    <div class="wrapper-bottom">
+        <ng-container *ngFor="let categorie of listBottom">
+            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+        </ng-container>
     </div>
+
 </div>
 
 <hr>

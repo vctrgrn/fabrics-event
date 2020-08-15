@@ -9,10 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ListeProduitsComponent implements OnInit {
   listCategoriePhare = [];
-  middleCategorieTop = [];
-  middleCategorieBottom = [];
-  firstCategorie;
-  lastCategorie;
+  listTop = [];
+  listBottom = [];
 
   constructor(private coategorieService: CategorieService, private router: Router) { }
 
@@ -36,17 +34,11 @@ export class ListeProduitsComponent implements OnInit {
     }
 
     preparerDonneesPourAffichage() {
-        this.firstCategorie = this.listCategoriePhare[0];
-        this.listCategoriePhare.splice(0,1);
+        this.listTop.push(this.listCategoriePhare[0], this.listCategoriePhare[1], this.listCategoriePhare[2] )
+        this.listCategoriePhare.splice(0,3);
+        this.listBottom.push(this.listCategoriePhare[0], this.listCategoriePhare[1], this.listCategoriePhare[2] )
 
-        this.middleCategorieTop.push(this.listCategoriePhare[0], this.listCategoriePhare[1])
-        this.listCategoriePhare.splice(0,2);
-
-        this.middleCategorieBottom.push(this.listCategoriePhare[0], this.listCategoriePhare[1])
-        this.listCategoriePhare.splice(0,2);
-
-        this.lastCategorie = this.listCategoriePhare[0];
-        this.listCategoriePhare.splice(0,1);
+  
 
     }
 

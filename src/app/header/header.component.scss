@@ -1,7 +1,7 @@
 @import '../../variable.scss';
 
 .navbar {
-    background: $primaryColor;
+    background: linear-gradient(79deg, $secondaryColor,$primaryColor) !important;
     border-bottom: 3px solid $secondaryColor;
     padding: 0 16px;
     height: 60px;
@@ -15,7 +15,7 @@
         border:0;
     }
     .navbar-collapse {
-        background: #4ba593;
+        background: transparent;
         z-index: 1;
         top: 60px;
         position: absolute;
@@ -30,7 +30,7 @@
     }
     .nav-link {
         color:white;
-        font-family: "Roboto";
+        font-family: 'Quicksand', sans-serif;
         &:hover {
             color:$secondaryColor;
         }
@@ -78,6 +78,7 @@
         border-left: 3px solid #285A53;
         color:white;
         display: flex;
+        font-family: 'Quicksand', sans-serif;
         align-items: center;
         @media screen and (min-width: 991px){
             top: 15px;

@@ -21,9 +21,7 @@
         display: inline-block;
         width:100%;
         letter-spacing: 0;
-        font-family: "Roboto";
-        letter-spacing: 5px;
-        text-transform: lowercase;
+        font-family: 'Quicksand', sans-serif;
         color: #285a53;
         padding: 90px 15px 10px;
         font-size: 20px;
@@ -39,11 +37,11 @@
             padding:0 0;
             text-align: left;
             font-size: 25px;
+            font-weight: bolder;
         }
       }
       
       h3 {
         text-align: center;
-        letter-spacing: 15px;
       }
 }
