@@ -1,3 +1,15 @@
 <div class="engagements">
-    ENGAGEMENT
+    <div class="engagement" *ngFor="let engagement of listEngagements">
+        <div class="icon">
+            <i class="fas {{engagement.icon}}"></i>
+        </div>
+        <div class="title">
+            <span>{{engagement.title}}</span>
+        </div>
+        <div class="text animate__animated animate__fadeInUp">
+            <p>{{engagement.text}}</p>
+            <i class="fas fa-caret-right"></i>
+        </div>
+       
+    </div>
 </div>
