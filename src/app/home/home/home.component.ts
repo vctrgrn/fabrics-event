@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { RecapitulatifService } from 'src/app/shared/service/recapitulatif.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProduitService } from 'src/app/shared/service/produit.service';
@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     this.asideVisible = recapService.isProducts;
     this.recap = recapService.recap;
   }
+
 
   ngOnInit(): void {
     this.idCategorie = this.route.snapshot.paramMap.get('?');

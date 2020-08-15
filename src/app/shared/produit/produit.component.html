@@ -28,14 +28,6 @@
                 </ng-container>
             </div>
         </ng-container>
-        <ng-container *ngIf="colorSelectionne">
-            <div class="color-check">
-                <p class="white-text">Couleur</p>
-                <div (click)="selectionneCouleur(produitForRecap.couleur)" class="card-couleur couleur-selectionnee" [style.background]="produitForRecap.couleur">
-                <i class="fas fa-check-circle"></i>
-                </div>
-            </div>
-        </ng-container>
  
     </div>
     <div class="z-depth-1-half " *ngIf="isSelectionne && colorSelectionne">

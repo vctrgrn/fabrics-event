@@ -37,6 +37,16 @@
             width: inherit;
             margin:auto;
         }
+        
+        app-engagements {
+            grid-column: 1 / span 5;
+            grid-row: 2;
+        }
+
+        app-slider-client {
+            grid-column: 1 / span 5;
+            grid-row: 3;
+        }
 
         app-notice {
             grid-column: 5;

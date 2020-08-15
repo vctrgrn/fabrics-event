@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let categorie of listCategoriePhare">
-        <a class="nav-link" href="#">{{categorie.title}} <span class="sr-only">(current)</span></a>
+        <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.title}} <span class="sr-only">(current)</span></span>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

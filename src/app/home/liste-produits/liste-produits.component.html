@@ -5,12 +5,12 @@
    </div>
     <div class="middle-categories">
         <div class="middle-top">
-            <div *ngFor="let categorie of middleCategorieTop" class="middle-top">
+            <div *ngFor="let categorie of middleCategorieTop" class="middleTop">
                 <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
               </div>
         </div>
         <div class="middle-bottom">
-            <div *ngFor="let categorie of middleCategorieBottom" class="">
+            <div *ngFor="let categorie of middleCategorieBottom" class="middleBottom">
                 <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" optionalClass="little" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
               </div>
         </div>

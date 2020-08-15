@@ -20,7 +20,9 @@
         flex-direction: column;
         height: auto;
         justify-content: space-between;
-        padding:10px;
+        .view {
+            height: 100%;
+        }
         .middle-top, .middle-bottom {
             display: flex;
             justify-content: space-between;
@@ -29,9 +31,24 @@
                 font-weight: bold;
             }
         }
-        .middle-bottom {
-            margin-top:5%;
+
+        .middle-top {
+            margin: 0 10px 10px;
+            .middleTop + .middleTop {
+                margin-left:5px;
+            }
         }
+
+        .middle-bottom {
+            margin: 10px 10px 0px;
+            .middleBottom + .middleBottom{
+                margin-left: 5px;
+            } 
+        }
+
+
+
+
     }
     .last-categorie {
         flex:1;

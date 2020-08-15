@@ -3,15 +3,21 @@
     <div class="coulee">
         <ng-container *ngIf="idCategorie then casListeProduit; else casHome"></ng-container>
     </div>
+    <ng-container *ngIf="!idCategorie">
+        <app-engagements></app-engagements>
+        <app-slider-client></app-slider-client>
+    </ng-container>
     <app-notice></app-notice>
 </div>
 
 <ng-template #casHome>
     <app-liste-produits></app-liste-produits>
     <app-methode-impression></app-methode-impression>
-    <app-engagements></app-engagements>
-    <app-slider-client></app-slider-client>
 </ng-template>
+
+
+
+
 <ng-template #casListeProduit>
     <app-titre titre="Tous nos {{nomCategorie}}"></app-titre>
     <div class="produit-wrapper">

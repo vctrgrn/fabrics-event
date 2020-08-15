@@ -38,5 +38,11 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['']);
     }
 
+    goToListeProduitByCategorie(categ) {
+        
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+        this.router.navigate(['categorie', {'?': categ.id, '&': categ.title}]));
+    }
+
 
 }
