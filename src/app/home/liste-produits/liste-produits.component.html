@@ -1,4 +1,7 @@
-<app-titre titre="Nos produits phare"></app-titre>
+<div class="title">
+    <app-titre titre="Nos produits phare"></app-titre>
+</div>
+
 <div class="main-wrapper">
    <div *ngIf="firstCategorie" class="first-categorie"> 
        <app-produit view="home" [image]=firstCategorie.nomImage [nomCategorie]="firstCategorie.title" (click)="goToListeProduitByCategorie(firstCategorie)"> </app-produit>

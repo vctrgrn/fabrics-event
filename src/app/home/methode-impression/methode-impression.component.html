@@ -1,4 +1,7 @@
-<app-titre titre="Méthodes d'impression" optionalClass="no-padding-top"></app-titre>
+<div class="title">
+    <app-titre titre="Méthodes d'impression" ></app-titre>
+</div>
+
 <div class="container-methods">
     <ng-container *ngFor="let methode of methodeImpressionTop">
         <div class="flip-card  {{methode.titre}}">
@@ -27,4 +30,7 @@
             </div>
         </div>
     </ng-container>
+    
 </div>
+
+
