@@ -1,10 +1,22 @@
-<div class="recap" *ngIf="isSidebarVisible()">
-    <ng-container *ngFor="let produit of getRecap()">
+<div class="recap " *ngIf="isSidebarVisible()">
+    <div class="card-header ">Votre récapitulatif</div>
+    
         <div class="product-wrapper">
-            <span>{{produit.produit}}</span>
-            <span>- {{produit.couleur}} </span>
-            <button (click)="removeProduit(produit)">SUPPR</button>
+            <ng-container *ngFor="let produit of getRecap()">
+            <div class="produit">   
+                <div class="produit-header">
+                    <div class="card-color" [style.background]="produit.couleur"> </div>
+                    <div class="nom-produit">{{produit.produit}}</div>
+                    <input type="number" (change)="updateQuantite($event, produit)" value="{{quantiteValue}}"/>
+                    <i (click)="removeProduit(produit)" class="far fa-trash-alt"></i>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" (change)="updateQuantite($event, produit)" value="{{quantiteValue}}"  class="slider" id="myRange">
+                  </div>
+                  <hr>
+            </div>
+        </ng-container>
         </div>
-    </ng-container>
+
 </div>
 

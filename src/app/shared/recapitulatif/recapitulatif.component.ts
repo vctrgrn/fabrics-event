@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RecapitulatifService } from '../service/recapitulatif.service';
 import { Subscription } from 'rxjs';
 
@@ -9,6 +9,8 @@ import { Subscription } from 'rxjs';
 })
 export class RecapitulatifComponent implements OnInit {
 
+  quantiteValue = 1;
+
   asideVisible: boolean;
   recap= []
 
@@ -16,6 +18,13 @@ export class RecapitulatifComponent implements OnInit {
     this.asideVisible = recapService.isProducts;
     this.recap = this.getRecap();
    }
+
+
+  updateQuantite(event, produit) {
+    this.quantiteValue = event.target.value;
+    produit.quantite = event.target.value;
+    this.recapService.setQuantiteProduit(produit);
+  }
 
   ngOnInit(): void {
   }

@@ -94,8 +94,8 @@ export class ProduitComponent implements OnInit {
   selectionneCouleur(couleur) {
     if(!this.colorSelectionne) {
       this.colorSelectionne = true;
-      this.produitForRecap.couleur = couleur.couleur
-      this.produitForRecap.id = this.produitForRecap.produit + this.produitForRecap.couleur;
+      this.produitForRecap.couleur = couleur.couleur;
+      this.produitForRecap.id = Math.floor(Math.random() * Math.floor(1000))
       this.recapService.addProduct(this.produitForRecap)
       this.resetView();
     } else {

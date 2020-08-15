@@ -35,8 +35,19 @@ export class RecapitulatifService {
     this.toggleRecapVisibility();
   }
 
+
   public getRecap() {
     this.recapSubject.next(this.recap);
+  }
+
+  public setQuantiteProduit(produit) {
+    for(let produitRecap of this.recap) {
+      if(produit.id == produitRecap.id ) {
+        produitRecap.quantite = produit.quantite;
+      }
+    }
+    this.recapSubject.next(this.recap);
+    this.toggleRecapVisibility();
   }
 
 

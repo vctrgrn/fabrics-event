@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   isAdd = false;
   recap = {};
 
-  ageControl = new FormControl();
 
   constructor(private route: ActivatedRoute, private produitService: ProduitService, private recapService: RecapitulatifService) { 
     this.asideVisible = recapService.isProducts;
