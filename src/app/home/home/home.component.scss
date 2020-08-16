@@ -1,4 +1,6 @@
 .main-wrapper {
+    background: url('src/assets/images/bg.png');
+
     .coulee {
         .produit-wrapper {
             display:flex;
@@ -51,7 +53,11 @@
             grid-column: 5;
             position: relative;
         }
+
+
     }
+
+
 
 }
 
