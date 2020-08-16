@@ -32,9 +32,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        &.t-white {
-          color: white;
+        @media screen and(min-width:991px) {
+          &.t-white {
+            color: white;
+          }
         }
+
         &.no-padding-top {
             padding-top:0;
         }
