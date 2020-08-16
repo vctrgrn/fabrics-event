@@ -48,19 +48,32 @@
         color:white;
         display: flex;
         justify-content: center;
-        &.one {
-            background-color: #E5A686;
-        }
-        &.two {
-            background-color: #92A4CE;
-        }
-        &.three {
-            background-color: #7BD5A2;
-        }
-        &.four {
-            background-color: #E2EC7D;
-        }
     }
+        .btn-step{
+
+            border-radius: 50%;
+            width: 50px;
+            color: white;
+            height: 50px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 0 auto;
+
+            &.one{
+                background-color: #E5A686;
+            }
+            &.two{
+                background-color: #92A4CE;
+            }
+            &.three{
+                background-color: #7BD5A2;
+            }
+            &.four{
+                background-color: #E2EC7D;
+            }
+        }
 
     .info {
         background: $primaryColor;
@@ -74,7 +87,6 @@
     }
 
     }
-
 }
 
 @keyframes pulse {
