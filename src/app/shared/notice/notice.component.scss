@@ -1,126 +1,7 @@
 @import '../../../variable.scss';
 
-:root {
-    --background-color: #FFFFFF;
-    --primary-color: #E66A53;
-}
-
-*{
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    height: 100%;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.08);
-    font-family: Arial;
-    display: flex;
-}
-
-.steps {
-    width: 300px;
-    text-align: center;
-    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
-    background-color: #439585;
-    padding: 24px 0;
-    position: relative;
-    margin: auto;
-}
 
 
-.step {
-    position: relative;
-    transition: all 0.4s ease-in-out;
-    background-color: #439585;
-}
-
-
-
-.step.minimized {
-    background-color: #439585;
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.header {
-    user-select: none;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.subheader {
-    user-select: none;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-
-.step.minimized > .step-content {
-    height: 0px;
-}
-
-.step-content {
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    position: relative;
-    height: 150px;
-    width: 100%;
-    background-color: #439585;
-    margin-top: 10px;
-}
-
-
-.next-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 0;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background-color: #0f4c42;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-}
-
-.close-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 0;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background-color: rgb(255, 0, 255);
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-}
-
-/* Irrelevant styling things */
-.close-btn:hover {
-    background-color: rgba(255, 0, 255, 0.6);
-}
-
-.close-btn:focus {
-    outline: 0;
-}
-
-.next-btn:hover {
-    background-color: rgba(255, 0, 0, 0.6);
-}
-
-.next-btn:focus {
-    outline: 0;
-}
-
-.step.minimized:hover {
-    background-color: rgba(0, 0, 0, 0.06);
-}
 
 
 .notice-desktop {
@@ -129,7 +10,6 @@ body {
     display:flex;
     background: white;
     visibility: unset;;
-    border:2px solid $primaryColor;
     z-index: 100;
     position: absolute;
     width: 80%;
@@ -161,36 +41,24 @@ body {
         font-size: 13px;
         color: $secondaryColor;
     }
-    .liste-notice {
-        list-style: none;
-        padding: 0px 20px 10px 20px;
-        .item   {
-            display: flex;
-            justify-content: space-between;
-            .number {
-                border-radius: 50%;
-                width: 25px;
-                height: 25px;
-                color:white;
-                display: flex;
-                justify-content: center;
-                &.un {
-                    background-color: #E5A686;
-                }
-                &.deux {
-                    background-color: #92A4CE;
-                }
-                &.trois {
-                    background-color: #7BD5A2;
-                }
-                &.quatre {
-                    background-color: #E2EC7D;
-                }
-            }
-            p {
-                text-align: left;
-                margin-left: 25px;
-            }
+    .number {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        color:white;
+        display: flex;
+        justify-content: center;
+        &.one {
+            background-color: #E5A686;
+        }
+        &.two {
+            background-color: #92A4CE;
+        }
+        &.three {
+            background-color: #7BD5A2;
+        }
+        &.four {
+            background-color: #E2EC7D;
         }
     }
 

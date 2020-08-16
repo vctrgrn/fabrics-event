@@ -3,6 +3,8 @@
 .title-wrapper {
     display: flex;
     align-items: center;
+    z-index: 100;
+    position: relative;
     justify-content: center;
     h3.listeProducts:before {
         content: '';

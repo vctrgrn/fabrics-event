@@ -4,41 +4,49 @@
     </button>
     <span class="title">Comment ça marche ?</span>
     <div>
-        <ng-container *ngFor="let item of noticeItem"> {{item.titre}}</ng-container>
        <ngb-accordion [closeOthers]="true">
-       
-
-    <ngb-panel id="static-1" title="Simple">
+    <ngb-panel id="static-1">
+        <ng-template ngbPanelHeader [style.background]="red">
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link p-0 one">Etape</button>
+              <div class="number one">1</div>
+            </div>
+          </ng-template>
         <ng-template ngbPanelContent>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+            Sélectionnez le ou les produits que vous désirez.
         </ng-template>
     </ngb-panel>
     <ngb-panel id="static-2">
-        <ng-template ngbPanelTitle>
-            <span>&#9733; <b>Fancy</b> title &#9733;</span>
-        </ng-template>
+        <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link p-0">Etape</button>
+              <div class="number two">2</div>
+            </div>
+          </ng-template>
         <ng-template ngbPanelContent>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+            Sélectionnez ensuite la couleur souhaitée.
         </ng-template>
     </ngb-panel>
-    <ngb-panel id="static-3" title="Disabled" [disabled]="true">
+    <ngb-panel id="static-3">
+        <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link p-0">Etape </button>
+              <div class="number three">3</div>
+            </div>
+          </ng-template>
         <ng-template ngbPanelContent>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+            Le récapitulatif de votre devis s'affichera, et vous pourrez éditer la quantité voulue du produit.
+        </ng-template>
+    </ngb-panel>
+    <ngb-panel id="static-4">
+        <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link p-0">Etape </button>
+              <div class="number four">4</div>
+            </div>
+          </ng-template>
+        <ng-template ngbPanelContent>
+            Validez votre devis. Vous aurez la possibilité de laisser un message, ainsi que les logos / images que vous desirez ajouter aux produits pour accompagner celui-ci.
         </ng-template>
     </ngb-panel>
 </ngb-accordion>

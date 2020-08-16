@@ -25,7 +25,7 @@ export class NoticeComponent implements OnInit {
     {
       'titre': '4',
       "class": 'four',
-      'text': 'Validez votre devis. Vous aurez la possibilité de laisser un message pour accompagner celui-ci.'
+      'text': 'Validez votre devis. Vous aurez la possibilité de laisser un message, ainsi que les logos / images que vous desirez ajouter aux produits pour accompagner celui-ci.'
     }
 
   ]
