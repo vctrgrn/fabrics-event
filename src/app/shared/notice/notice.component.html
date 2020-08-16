@@ -1,11 +1,11 @@
 
 
-<div class="notice-desktop z-depth-1-half">
+<!--<div class="notice-desktop z-depth-1-half">
     <button class="question" (click)="afficherNotice()"><img src="../../../assets/images/question.png" alt="" ></button>
     <span class="title">Comment ça marche ?</span>
     <div *ngIf="isOpen">
         <ul class="liste-notice" >
-            <li class="item" *ngFor="let item of noticeItem"> 
+            <li class="item" *ngFor="let item of noticeItem">
                 <div>
                     <span class="number {{item.class}}">{{item.titre}}</span>
                 </div>
@@ -16,6 +16,36 @@
         </ul>
         <div class="info">
             <span>NOTRE CONSEILLER VOUS CONTACTERA APRES VALIDATION</span>
+        </div>
+    </div>
+</div>-->
+
+<div class="steps">
+    <div class="step">
+        <div class="step-header">
+            <div class="header">Hello This is step one!</div>
+            <div class="subheader">Hopefully this looks cool</div>
+        </div>
+        <div class="step-content one">
+            <button class="next-btn">Next</button>
+        </div>
+    </div>
+    <div class="step minimized">
+        <div class="step-header">
+            <div class="header">This is step two!</div>
+            <div class="subheader">The content is a little bigger!</div>
+        </div>
+        <div class="step-content two">
+            <button class="next-btn">Next</button>
+        </div>
+    </div>
+    <div class="step minimized">
+        <div class="step-header">
+            <div class="header">And finally step three!</div>
+            <div class="subheader">Last but not the least!</div>
+        </div>
+        <div class="step-content three">
+            <button class="close-btn">Close</button>
         </div>
     </div>
 </div>

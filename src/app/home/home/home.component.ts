@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
 export class HomeComponent implements OnInit {
   idCategorie;
   nomCategorie;
-  listProduitByCategorie = []
+  listProduitByCategorie = [];
   asideVisible: boolean;
   isAdd = false;
   recap = {};
