@@ -1,7 +1,7 @@
 <ng-container *ngIf="view == 'home' then casHome; else casProduit"></ng-container>
 
 <ng-template #casHome>
-    <div class="view overlay  produit z-depth-1-half">
+    <div class="view overlay  produit ">
         <img src='{{urlImage}}' class="img-fluid {{optionalClass}}" alt="smaple image">
         <div class="mask flex-center rgba-black-light">
             <p class="white-text">{{nomCategorie}}</p>
@@ -10,7 +10,7 @@
 </ng-template>
 
 <ng-template #casProduit>
-    <div class="view overlay produit z-depth-1-half" (click)="selectionneProduit(nomCategorie)">
+    <div class="view overlay produit" (click)="selectionneProduit(nomCategorie)">
         <img src='{{urlImage}}' class="img-fluid {{optionalClass}}" alt="smaple image">
         <div class="mask flex-center {{isSelectionne ? 'active rgba-black-strong' : 'rgba-black-light'}}">
             <p class="white-text">{{nomCategorie}}</p>
