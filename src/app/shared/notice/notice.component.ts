@@ -9,22 +9,22 @@ export class NoticeComponent implements OnInit {
   noticeItem = [
     {
       'titre': '1',
-      "class": 'un',
+      "class": 'one',
       'text': 'Sélectionnez le ou les produits que vous désirez.'
     }, 
     {
       'titre': '2',
-      "class": 'deux',
+      "class": 'two',
       'text': 'Sélectionnez ensuite la ou les couleurs souhaitées.'
     }, 
     {
       'titre': '3',
-      "class": 'trois',
-      'text': "MLe récapitulatif de votre devis s'affichera, et vous pourrez éditer la quantité voulue du produit."
+      "class": 'three',
+      'text': "Le récapitulatif de votre devis s'affichera, et vous pourrez éditer la quantité voulue du produit."
     }, 
     {
       'titre': '4',
-      "class": 'quatre',
+      "class": 'four',
       'text': 'Validez votre devis. Vous aurez la possibilité de laisser un message pour accompagner celui-ci.'
     }
 
