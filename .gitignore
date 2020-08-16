@@ -2,3 +2,4 @@
 node_modules/
 e2e/
 package-lock.json
+src/assets/images/.DS_Store
