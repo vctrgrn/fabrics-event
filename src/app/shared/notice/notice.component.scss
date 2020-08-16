@@ -30,7 +30,9 @@
         animation: pulse 3s infinite;
         background: white;
         cursor: pointer;
-        left:38%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
     .title {
         text-transform: uppercase;
