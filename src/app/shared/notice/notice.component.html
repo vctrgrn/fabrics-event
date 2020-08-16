@@ -1,11 +1,13 @@
 
 
-<div class="notice-desktop z-depth-1-half">
-    <button class="question" (click)="afficherNotice()"><img src="../../../assets/images/question.png" alt="" ></button>
+<!--<div class="notice-desktop z-depth-1-half">
+    <button class="question" (click)="afficherNotice()">
+        <img src="../../../assets/images/question.png" alt="" >
+    </button>
     <span class="title">Comment ça marche ?</span>
     <div *ngIf="isOpen">
         <ul class="liste-notice" >
-            <li class="item" *ngFor="let item of noticeItem"> 
+            <li class="item" *ngFor="let item of noticeItem">
                 <div>
                     <span class="number {{item.class}}">{{item.titre}}</span>
                 </div>
@@ -16,6 +18,18 @@
         </ul>
         <div class="info">
             <span>NOTRE CONSEILLER VOUS CONTACTERA APRES VALIDATION</span>
+        </div>
+    </div>
+</div>-->
+
+<div class="steps" *ngFor="let item of noticeItem">
+    <div class="step minimized">
+        <div class="step-header">
+            <div class="header">{{item.titre}}</div>
+        </div>
+        <div class="step-content {{ item.class}} ">
+            <div class="subheader">{{item.text}}</div>
+            <button class="next-btn">Compris !</button>
         </div>
     </div>
 </div>

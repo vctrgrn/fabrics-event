@@ -1,6 +1,126 @@
 @import '../../../variable.scss';
 
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #E66A53;
+}
 
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.08);
+    font-family: Arial;
+    display: flex;
+}
+
+.steps {
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+    background-color: #439585;
+    padding: 24px 0;
+    position: relative;
+    margin: auto;
+}
+
+
+.step {
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    background-color: #439585;
+}
+
+
+
+.step.minimized {
+    background-color: #439585;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.header {
+    user-select: none;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.subheader {
+    user-select: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.step.minimized > .step-content {
+    height: 0px;
+}
+
+.step-content {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    background-color: #439585;
+    margin-top: 10px;
+}
+
+
+.next-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #0f4c42;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rgb(255, 0, 255);
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+/* Irrelevant styling things */
+.close-btn:hover {
+    background-color: rgba(255, 0, 255, 0.6);
+}
+
+.close-btn:focus {
+    outline: 0;
+}
+
+.next-btn:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.next-btn:focus {
+    outline: 0;
+}
+
+.step.minimized:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
 
 
 .notice-desktop {
@@ -52,7 +172,7 @@
                 height: 25px;
                 color:white;
                 display: flex;
-                justify-content: center;            
+                justify-content: center;
                 &.un {
                     background-color: #E5A686;
                 }
@@ -85,7 +205,7 @@
     }
 
     }
-    
+
 }
 
 @keyframes pulse {
@@ -93,12 +213,12 @@
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
     }
-  
+
     70% {
       transform: scale(1);
       box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
     }
-  
+
     100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
