@@ -130,6 +130,7 @@ body {
     background: white;
     visibility: unset;;
     border:2px solid $primaryColor;
+    z-index: 100;
     position: absolute;
     width: 80%;
     left:38px;

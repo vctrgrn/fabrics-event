@@ -33,7 +33,7 @@ export class NoticeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.recap();
+    // this.recap();
   }
 
   afficherNotice() {

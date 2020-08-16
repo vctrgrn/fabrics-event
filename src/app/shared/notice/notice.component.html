@@ -1,28 +1,13 @@
-
-
-<!--<div class="notice-desktop z-depth-1-half">
-    <button class="question" (click)="afficherNotice()">
+<div class="notice-desktop z-depth-1-half">
+    <button class="question">
         <img src="../../../assets/images/question.png" alt="" >
     </button>
     <span class="title">Comment ça marche ?</span>
-    <div *ngIf="isOpen">
-        <ul class="liste-notice" >
-            <li class="item" *ngFor="let item of noticeItem">
-                <div>
-                    <span class="number {{item.class}}">{{item.titre}}</span>
-                </div>
-                <div>
-                    <p>{{item.text}}</p>
-                </div>
-            </li>
-        </ul>
-        <div class="info">
-            <span>NOTRE CONSEILLER VOUS CONTACTERA APRES VALIDATION</span>
-        </div>
-    </div>
-</div>-->
+    <div>
+        <ng-container *ngFor="let item of noticeItem"> {{item.titre}}</ng-container>
+       <ngb-accordion [closeOthers]="true">
+       
 
-<ngb-accordion [closeOthers]="true" activeIds="static-1">
     <ngb-panel id="static-1" title="Simple">
         <ng-template ngbPanelContent>
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
@@ -57,3 +42,10 @@
         </ng-template>
     </ngb-panel>
 </ngb-accordion>
+        <div class="info">
+            <span>NOTRE CONSEILLER VOUS CONTACTERA APRES VALIDATION</span>
+        </div>
+    </div>
+</div>
+
+
