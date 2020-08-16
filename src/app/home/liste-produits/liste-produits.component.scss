@@ -1,7 +1,7 @@
 @import '../../../variable.scss';
 
 .title {
-    padding-bottom: 25px;;
+    padding-bottom: 25px;
   }
   
 
@@ -20,10 +20,14 @@
     .wrapper-top, .wrapper-bottom {
         display:flex;
         flex-direction: column;
+        app-produit + app-produit {
+            margin-top:25px;
+        }
         @media screen and(min-width:768px) {
             flex-direction: row;
             app-produit + app-produit {
                 margin-left:25px;
+                margin-top:0;
             }
         }
 

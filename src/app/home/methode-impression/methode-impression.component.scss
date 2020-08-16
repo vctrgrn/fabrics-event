@@ -18,11 +18,15 @@
     }
     .flip-card {
         background-color: transparent;
-        width: 150px;
+        width: 90%;
         height: 150px;
         flex:1;
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
         /* This container is needed to position the front and back side */
+        @media screen and (min-width: 768px){
+          width: 150px;
+          height: 150px;
+        }
         .flip-card-inner {
           position: relative;
           width: 100%;
