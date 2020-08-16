@@ -30,7 +30,8 @@
     }
     .nav-link {
         color:white;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Staatliches', cursive;
+        font-weight: 300;
         &:hover {
             color:$secondaryColor;
         }
@@ -78,7 +79,7 @@
         border-left: 3px solid #285A53;
         color:white;
         display: flex;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Staatliches', cursive;
         align-items: center;
         @media screen and (min-width: 991px){
             top: 15px;
