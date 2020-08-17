@@ -17,6 +17,10 @@ export class ProduitComponent implements OnInit {
   @Input()
   listColor;
   @Input()
+  infosProduit: string;
+  @Input()
+  marque: string;
+  @Input()
   image: string;
   @Input()
   view: string;

@@ -19,12 +19,17 @@
 
 
 <ng-template #casListeProduit>
-    <app-titre titre="Tous nos {{nomCategorie}}"></app-titre>
+    <div class="title">
+        <app-titre optionalClass="t-white" titre="Tous nos {{nomCategorie}}"></app-titre>
+    </div>
+
     <div class="produit-wrapper">
         <ng-container *ngFor="let produit of listProduitByCategorie">
             <app-produit         
             [listColor]="produit.couleurs" 
             [image]=produit.nomImage 
+            [marque]= produit.marque
+            [infosProduit]= produit.infos
             [nomCategorie]="produit.title"></app-produit>
         </ng-container>
     </div>

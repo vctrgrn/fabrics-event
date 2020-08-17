@@ -2,14 +2,15 @@
   <div class="navbar-brand" (click)="goHome()">
     <img src="../../assets/images/logo.jpg"/>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let categorie of listCategoriePhare">
         <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.title}} <span class="sr-only">(current)</span></span>
       </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Autres

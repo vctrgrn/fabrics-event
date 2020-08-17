@@ -10,7 +10,10 @@
 </ng-template>
 
 <ng-template #casProduit>
-    <div class="view overlay produit" (click)="selectionneProduit(nomCategorie)">
+
+<ng-template #tipContent>{{infosProduit}}</ng-template>
+    <div class="view overlay produit" (click)="selectionneProduit(nomCategorie)"  [ngbTooltip]="tipContent" placement="bottom">
+        <div class="ribbon ribbon-top-left"><span>{{marque}}</span></div>
         <img src='{{urlImage}}' class="img-fluid {{optionalClass}}" alt="smaple image">
         <div class="mask flex-center {{isSelectionne ? 'active rgba-black-strong' : 'rgba-black-light'}}">
             <p class="white-text">{{nomCategorie}}</p>
@@ -30,8 +33,7 @@
         </ng-container>
  
     </div>
-    <div class="z-depth-1-half " *ngIf="isSelectionne && colorSelectionne">
-        <div>Quantité voulue</div>
-        <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
-    </div>
+
 </ng-template>
+
+

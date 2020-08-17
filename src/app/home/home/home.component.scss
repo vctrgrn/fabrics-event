@@ -1,6 +1,9 @@
 .main-wrapper {
     z-index: 100;
     .coulee {
+        .title {
+            margin-bottom: 2rem;
+        }
         .produit-wrapper {
             display:flex;
             flex-direction:column;

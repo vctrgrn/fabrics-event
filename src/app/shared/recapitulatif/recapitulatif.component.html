@@ -1,7 +1,9 @@
-<div class="recap" *ngIf="isSidebarVisible()">
+
+
+<div class="recap" >
     <div class="card-header ">Votre récapitulatif</div>
     
-        <div class="product-wrapper">
+        <div class="product-wrapper" *ngIf="isSidebarVisible()">
             <ng-container *ngFor="let produit of getRecap()">
             <div class="produit">   
                 <div class="produit-header">
