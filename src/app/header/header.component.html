@@ -1,27 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-  <div class="navbar-brand" (click)="goHome()">
-    <img src="../../assets/images/logo.jpg"/>
-  </div>
-
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" *ngFor="let categorie of listCategoriePhare">
-        <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.title}} <span class="sr-only">(current)</span></span>
-      </li>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-brand-centered navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+<!--    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Autres
-        </a>
-        <div class="dropdown-menu z-depth-5" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#" *ngFor="let categorie of listeCategAutre">{{categorie.title}}</a>
-        </div>
-      </li>
-    </ul>
-    <div class="navbar-nav ml-auto">
-      <a href="" class="devis">DEVIS GRATUIT</a>
-    </div>
-  </div>
+    </div>-->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+      <ul class="nav navbar-nav">
+        <li class="nav-item" *ngFor="let categorie of listCategoriePhare | slice:0:3">
+          <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.title}} <span class="sr-only">(current)</span></span>
+        </li>
+      </ul>
+      <div class="navbar-brand navbar-brand-centered" (click)="goHome()">
+        <img src="../../assets/images/logo.jpg"/>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item" *ngFor="let categorie of listCategoriePhare | slice:3:6">
+          <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.title}} <span class="sr-only">(current)</span></span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Autres
+          </a>
+          <div class="dropdown-menu z-depth-5" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#" *ngFor="let categorie of listeCategAutre">{{categorie.title}}</a>
+          </div>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>

@@ -5,22 +5,7 @@
     align-items: center;
     z-index: 100;
     position: relative;
-    justify-content: center;
-    h3.listeProducts:before {
-        content: '';
-        height: 15px;
-        margin-right: 15px;
-        width: 15px;
-        position: relative;
-        background: #4ba593;
-        display: block;
-        z-index: -1;
-        float: left;
-        box-shadow: 8px 8px #285952;
-        @media screen and(min-width:991px) {
-            top:5px;
-        }
-      }
+
       .listeProducts {
         display: inline-block;
         width:100%;
@@ -28,13 +13,18 @@
         font-family: 'Alata', sans-serif;
         color: #285952;
         padding: 90px 15px 10px;
-        font-size: 20px;
+        font-size: 77px;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: center;
+
         @media screen and(min-width:991px) {
           &.t-white {
             color: white;
+            width: auto;
+            font-size: 86px;
+            text-transform: uppercase;
           }
         }
 
@@ -44,10 +34,10 @@
 
         @media screen and(min-width:991px) {
             display: block;
-            width: 865px;
+            width: 100%;
             padding:0 0;
-            text-align: left;
-            font-size: 25px;
+            text-align: center;
+            font-size: 77px;
             font-weight: 300;
         }
       }

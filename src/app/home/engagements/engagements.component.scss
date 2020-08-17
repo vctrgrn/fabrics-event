@@ -3,7 +3,7 @@
 .engagements {
     margin-top: 100px;
     width: 100%;
-    background:$secondaryColor;
+    background:#295a51;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -46,7 +46,7 @@
             transform-style: preserve-3d;
             height: 70px;
             i {
-                color: $secondaryColor;
+                color: #295a51;
                 font-size:30px;
             }
         }
