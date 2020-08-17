@@ -26,6 +26,12 @@ export class RecapitulatifComponent implements OnInit {
     this.recapService.setQuantiteProduit(produit);
   }
 
+  test(value, produit) {
+    console.log(value);
+    produit.couleur = value;
+    this.recapService.setColorProduit(produit);
+  }
+
   ngOnInit(): void {
   }
 

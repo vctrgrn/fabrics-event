@@ -7,7 +7,7 @@
             <ng-container *ngFor="let produit of getRecap()">
             <div class="produit">   
                 <div class="produit-header">
-                    <div class="card-color" [style.background]="produit.couleur"> </div>
+                    <input class="color-picker" (colorPickerChange)="test($event, produit)" cpPosition="bottom" [(colorPicker)]="produit.couleur" [style.background]="produit.couleur"/>
                     <div class="nom-produit">{{produit.produit}}</div>
                     <input type="number" (change)="updateQuantite($event, produit)" value="{{quantiteValue}}"/>
                     <i (click)="removeProduit(produit)" class="far fa-trash-alt"></i>

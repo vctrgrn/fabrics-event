@@ -20,6 +20,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TitreComponent } from './shared/titre/titre.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { Ng5SliderModule } from 'ng5-slider';
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     NgbModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

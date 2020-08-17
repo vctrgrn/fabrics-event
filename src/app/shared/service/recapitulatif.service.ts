@@ -50,6 +50,17 @@ export class RecapitulatifService {
     this.toggleRecapVisibility();
   }
 
+  public setColorProduit(produit) {
+    for(let produitRecap of this.recap) {
+      if(produit.id == produitRecap.id ) {
+        produitRecap.couleur = produit.couleur;
+      }
+    }
+    console.log(this.recap);
+    this.recapSubject.next(this.recap);
+    this.toggleRecapVisibility();
+  }
+
 
   public toggleRecapVisibility() {
     if(this.recap.length > 0 ) {
