@@ -2,14 +2,14 @@
 
 
 #Clouds {
-    position: absolute;
-    top: -80%;
+    position: fixed;
+    top: -70px;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    height: 20%;
-    background: #295a52;
+    height: 40%;
+    background: #387d70;
     overflow: hidden;
     -webkit-animation: FadeIn 3s ease-out;
     animation: FadeIn 3s ease-out;
@@ -17,7 +17,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: -1;
 }
 
 #Clouds > *{
@@ -316,13 +315,15 @@
     }
 
     .title {
+        background:#295a51;
         text-transform: uppercase;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         font-family: "Alata", sans-serif;
         font-weight: 900;
         font-size: 18px;
-        color: white;
+        width:100%;
+        text-align: center;
     }
     .number {
         border-radius: 50%;
