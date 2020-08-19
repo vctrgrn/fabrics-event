@@ -43,7 +43,7 @@ export class ListeProduitsComponent implements OnInit {
     }
 
     goToListeProduitByCategorie(categ) {
-        this.router.navigate(['categorie', {'?': categ.id, '&': categ.title}]);
+        this.router.navigate(['categorie', {'?': categ.id, '&': categ.name}]);
     }
 
 

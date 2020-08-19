@@ -12,7 +12,7 @@ export class ProduitService {
   
   }
 
-  public getProduitByCategorie(): Observable<any> {
+  public getProduitByCategorie(id): Observable<any> {
     return this.httpClient.get<Observable<any>>('http://localhost:3000/produits');
   }
 }

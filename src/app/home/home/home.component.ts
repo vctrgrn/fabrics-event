@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.idCategorie = this.route.snapshot.paramMap.get('?');
     this.nomCategorie = this.route.snapshot.paramMap.get('&');
-     this.produitService.getProduitByCategorie().subscribe(
+     this.produitService.getProduitByCategorie(this.idCategorie).subscribe(
        data => {
            this.preparerDonneesPourAffichage(data);
        },

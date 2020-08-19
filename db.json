@@ -1,24 +1,24 @@
 {
   "categories": [
-    { "id": 1, "type": 1, "title": "T-Shirts", "nomImage": "tshirts.png"},
-    { "id": 2, "type": 1, "title": "Tasses", "nomImage": "tasses.png"},
-    { "id": 3, "type": 1, "title": "Sweats", "nomImage": "sweats.png"},
-    { "id": 4, "type": 1, "title": "Sacs", "nomImage": "sacs.png"},
-    { "id": 5, "type": 1, "title": "Casquettes", "nomImage": "casquettes.png"},
-    { "id": 6, "type": 1, "title": "Autres", "nomImage": "autres.png"},
-    { "id": 7, "type": 2, "title": "Categ"},
-    { "id": 8, "type": 2, "title": "Categ"},
-    { "id": 9, "type": 2, "title": "categ"}
+    { "id": 1, "type": 1, "name": "T-Shirts", "nomImage": "tshirts.png"},
+    { "id": 2, "type": 1, "name": "Tasses", "nomImage": "tasses.png"},
+    { "id": 3, "type": 1, "name": "Sweats", "nomImage": "sweats.png"},
+    { "id": 4, "type": 1, "name": "Sacs", "nomImage": "sacs.png"},
+    { "id": 5, "type": 1, "name": "Casquettes", "nomImage": "casquettes.png"},
+    { "id": 6, "type": 1, "name": "Autres", "nomImage": "autres.png"},
+    { "id": 7, "type": 2, "name": "Categ"},
+    { "id": 8, "type": 2, "name": "Categ"},
+    { "id": 9, "type": 2, "name": "categ"}
   ],
   "produits": [
-    { "id": 1, "id_Categorie": 1, "title": "Sweat1", "nomImage": "sweat.png", "couleurs": [1,2,3], "marque": "marque", "infos": "infos produit", "labelBio":"true" },
-    { "id": 2, "id_Categorie": 1, "title": "Sweat2", "nomImage": "sweat.png" , "couleurs": [1,2,4], "marque": "marque", "infos": "infos produit", "labelBio":"false"},
-    { "id": 3, "id_Categorie": 1, "title": "Sweat3", "nomImage": "sweat.png", "couleurs": [1,2,5], "marque": "marque", "infos": "infos produit", "labelBio":"true"},
-    { "id": 4, "id_Categorie": 2, "title": "Autre1", "nomImage": "sweat.png", "couleurs": [1,3,4] , "marque": "marque", "infos": "infos produit", "labelBio":"false"},
-    { "id": 5, "id_Categorie": 2, "title": "Autre2", "nomImage": "sweat.png", "couleurs": [1,3,5], "marque": "marque", "infos": "infos produit", "labelBio":"true" },
-    { "id": 6, "id_Categorie": 3, "title": "Bonnet1", "nomImage": "sweat.png" , "couleurs": [2,3,4], "marque": "marque", "infos": "infos produit", "labelBio":"false"},
-    { "id": 7, "id_Categorie": 4, "title": "CategPhare1", "nomImage": "sweat.png" , "couleurs": [2,3,5], "marque": "marque", "infos": "infos produit", "labelBio":"true"},
-    { "id": 8, "id_Categorie": 5, "title": "CategPhareBis", "nomImage": "sweat.png", "couleurs": [3,4,5], "marque": "marque", "infos": "infos produit", "labelBio":"false" }
+    { "id": 1, "id_Categorie": 1, "name": "t-shirt 1", "nomImage": "tshirts.png", "couleurs": [1,2,3], "marque": "marque", "infos": "infos produit", "labelBio":"true" },
+    { "id": 2, "id_Categorie": 1, "name": "t-shirt 2", "nomImage": "tshirts.png" , "couleurs": [1,2,4], "marque": "marque", "infos": "infos produit", "labelBio":"false"},
+    { "id": 3, "id_Categorie": 1, "name": "t-shirt 3", "nomImage": "tshirts.png", "couleurs": [1,2,5], "marque": "marque", "infos": "infos produit", "labelBio":"true"},
+    { "id": 4, "id_Categorie": 2, "name": "Tasses 1", "nomImage": "tasses.png", "couleurs": [1,3,4] , "marque": "marque", "infos": "infos produit", "labelBio":"false"},
+    { "id": 5, "id_Categorie": 2, "name": "Tasses 2", "nomImage": "tasses.png", "couleurs": [1,3,5], "marque": "marque", "infos": "infos produit", "labelBio":"true" },
+    { "id": 6, "id_Categorie": 3, "name": "sweat 1", "nomImage": "sweats.png" , "couleurs": [2,3,4], "marque": "marque", "infos": "infos produit", "labelBio":"false"},
+    { "id": 7, "id_Categorie": 3, "name": "sweat 2", "nomImage": "sweats.png" , "couleurs": [2,3,5], "marque": "marque", "infos": "infos produit", "labelBio":"true"},
+    { "id": 8, "id_Categorie": 5, "name": "CategPhareBis", "nomImage": "sweats.png", "couleurs": [3,4,5], "marque": "marque", "infos": "infos produit", "labelBio":"false" }
   ],
   "couleurs": [
     {"id": 1, "couleur": "#4ba593"},

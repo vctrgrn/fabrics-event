@@ -13,19 +13,23 @@
         letter-spacing: 0;
         font-family: 'Alata', sans-serif;
         color: #285952;
-        padding: 90px 15px 10px;
-        font-size: 77px;
+        padding: 30px 15px 10px;
+        font-size: 20px;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: center;
+        &.t-white {
+          color: white;
+          width: auto;
+          font-size: 20px;
+          text-transform: uppercase;
+        }
 
         @media screen and(min-width:991px) {
+          padding: 90px 15px 10px;
           &.t-white {
-            color: white;
-            width: auto;
             font-size: 30px;
-            text-transform: uppercase;
           }
         }
 

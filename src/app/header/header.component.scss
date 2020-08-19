@@ -1,21 +1,47 @@
 @import '../../variable.scss';
 
 .navbar {
-
     background: #295a52;
     padding: 0 16px;
     height: 60px;
     display: flex;
     flex-direction: row-reverse;
+    .navbar-toggle{
+        border:0 !important;
+        background:transparent !important;
+        i {
+            color:white;
+            font-size:25px;
+        }
+        @media screen and (min-width: 991px){
+            display: none;
+        }
+    }
+    .navbar-collapse {
+        background:$primaryColor !important;
+    }
+    .mobile {
+        display: block;
+        img {
+            width: 110px;
+            height: auto;
+            z-index: 100;
+            position: absolute;
+            border-radius: 50%;
+            border: 5px solid white;
+            top:25px;
+            left: calc(50vw - (/* width */110px / 2));
+        }
+        @media screen and (min-width: 991px){
+            display: none;
+        }
+    }
     @media screen and (min-width: 991px){
         height: 100px;
         flex-direction: initial;
     }
-    .navbar-toggler{
-        border:0;
-    }
+
     .navbar-collapse {
-        background: transparent;
         z-index: 1;
         top: 60px;
         position: absolute;
@@ -25,6 +51,7 @@
         @media screen and (min-width: 991px){
             padding:0;
             position: initial;
+            background: transparent !important;
         }
     }
 
@@ -49,7 +76,7 @@
 
     .dropdown-menu {
         border: 3px solid $secondaryColor;
-        background: $secondaryColor;
+        background: $primaryColor;
         opacity: 0.9;
         margin-bottom: 15px;
         @media screen and (min-width: 991px){
@@ -66,12 +93,13 @@
             }
         }
     }
-    img {
+    .desktop {
         width: 110px;
         height: auto;
         z-index: 100;
         position: absolute;
         border-radius: 50%;
+        display: none;
         border: 5px solid white;
         top:25px;
         left: calc(50vw - (/* width */110px / 2));
@@ -79,6 +107,7 @@
             position: absolute;
             left: 0;
             right: 20px;
+            display: block;
             margin: 0 auto;
             display: block;
             width: 130px;
