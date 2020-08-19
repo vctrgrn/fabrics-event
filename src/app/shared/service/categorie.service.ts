@@ -12,6 +12,6 @@ export class CategorieService {
   }
 
   public getCategories(): Observable<any> {
-    return this.httpClient.get<Observable<any>>('http://localhost:3000/categories');
+    return this.httpClient.get<Observable<any>>('http://www.labo.fabricsevent.fr/public/api/categories');
   }
 }

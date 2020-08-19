@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row-reverse;
     @media screen and (min-width: 991px){
-        height: 110px;
+        height: 100px;
         flex-direction: initial;
     }
     .navbar-toggler{
@@ -73,7 +73,7 @@
         position: absolute;
         border-radius: 50%;
         border: 5px solid white;
-        top:5px;
+        top:25px;
         left: calc(50vw - (/* width */110px / 2));
         @media screen and (min-width: 991px){
             position: absolute;
@@ -82,7 +82,7 @@
             margin: 0 auto;
             display: block;
             width: 130px;
-            top:45px;
+            top:35px;
             text-align: center;
             background-color: #eee;
         }

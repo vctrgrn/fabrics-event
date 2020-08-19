@@ -5,12 +5,12 @@
 <div class="main-wrapper">
     <div class="wrapper-top">
         <ng-container *ngFor="let categorie of listTop">
-            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.name"></app-produit>
         </ng-container>
     </div>
     <div class="wrapper-bottom">
         <ng-container *ngFor="let categorie of listBottom">
-            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.title"></app-produit>
+            <app-produit view="home" (click)="goToListeProduitByCategorie(categorie)" [image]=categorie.nomImage [nomCategorie]="categorie.name"></app-produit>
         </ng-container>
     </div>
 

@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   
     selectCategoriesPhares(data) {
       for(let item of data) {
-        if(item.type == 1 && item.title != 'Autres') {
+        if(item.type == 1 && item.name != 'Autres') {
           this.listCategoriePhare.push(item);
         } else {
             this.listeCategAutre.push(item);

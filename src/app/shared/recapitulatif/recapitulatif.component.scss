@@ -29,6 +29,21 @@
         width: 80%;
         left: 25px;
         top:9px;
+        .hr-devis{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-top: 1px dotted #2A5A52;
+            height: 10px;
+            width: 90%;
+        }
+        .validation-devis {
+            background: #2A5A52;
+            width: 80%;
+            margin: auto;
+            color:white;
+            cursor: pointer;
+            padding: 5px;
+        }
 
         .product-wrapper {
             display:flex;
@@ -78,18 +93,7 @@
 
 
                 }
-                hr {
-                    margin-top: 1rem;
-                    margin-bottom: 1rem;
-                    border-top: 1px dotted $secondaryColor;
-                    height: 10px;
-                    width: 90%;
-                }
-                &:last-child {
-                    hr {
-                        display:none;
-                    }
-                }
+
             }
         }
     }
