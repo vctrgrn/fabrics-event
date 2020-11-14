@@ -19,7 +19,7 @@
       <div class="navbar-brand navbar-brand-centered" (click)="goHome()">
         <img class="desktop" src="../../assets/images/logo.jpg"/>
       </div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right second">
         <li class="nav-item" *ngFor="let categorie of listCategoriePhare | slice:3:6">
           <span class="nav-link" (click)="goToListeProduitByCategorie(categorie)">{{categorie.name}} <span class="sr-only">(current)</span></span>
         </li>

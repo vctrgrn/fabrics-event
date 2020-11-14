@@ -21,6 +21,7 @@ import { TitreComponent } from './shared/titre/titre.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng5SliderModule } from 'ng5-slider';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
     EngagementsComponent,
     SliderClientComponent,
     ProduitComponent,
-    TitreComponent
+    TitreComponent,
+    LoaderComponent
     
   ],
   imports: [

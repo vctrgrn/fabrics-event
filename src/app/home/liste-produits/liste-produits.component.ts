@@ -11,15 +11,19 @@ export class ListeProduitsComponent implements OnInit {
   listCategoriePhare = [];
   listTop = [];
   listBottom = [];
+  displaySpinner = false;
 
   constructor(private coategorieService: CategorieService, private router: Router) { }
 
   ngOnInit(): void {
+    this.displaySpinner = true;
     this.coategorieService.getCategories().subscribe(
       reponse => {
         this.selectCategoriesPhares(reponse)
+        this.displaySpinner = false;
       },
       error => {
+        this.displaySpinner = false;
           console.log(error)
       })
     }

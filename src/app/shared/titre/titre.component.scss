@@ -20,7 +20,6 @@
         align-items: center;
         justify-content: center;
         &.t-white {
-          color: white;
           width: auto;
           font-size: 20px;
           text-transform: uppercase;
@@ -30,6 +29,7 @@
           padding: 90px 15px 10px;
           &.t-white {
             font-size: 30px;
+            color: white;
           }
         }
 

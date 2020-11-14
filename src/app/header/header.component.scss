@@ -52,6 +52,7 @@
             padding:0;
             position: initial;
             background: transparent !important;
+            justify-content: space-between;
         }
     }
 
@@ -61,7 +62,10 @@
     }
 
     ul {
-        margin: 0 auto;
+        &.second {
+            position: relative;
+            left: -5%;
+        }
     }
 
     .nav-link {

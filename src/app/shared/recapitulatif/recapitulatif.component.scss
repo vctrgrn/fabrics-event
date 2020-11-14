@@ -1,7 +1,7 @@
 @import '../../../variable.scss';
 
 .card-header {
-    background: linear-gradient(40deg,$primaryColor,$secondaryColor) !important;
+    background: $primaryColor;
     color:white;
     font-family: "Roboto";
     display: flex;
@@ -10,6 +10,7 @@
     text-transform: uppercase;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);;
     border-radius: 0rem;
+    width: 100%;
     font-size: 13px;
     justify-content: center;
     align-items: center;
@@ -20,15 +21,23 @@
 
 
 .recap {
-    display:none;
-    @media screen and(min-width:1440px){
+    display:flex;
+    position: absolute;
+    z-index: 1000;
+    width: 80%;
+    left: calc(50vw - (/* width */80% / 2));
+    top:150px;
+    @media screen and(min-width:768px){
+        width:230px;
+        left:25px;
+    }
+    @media screen and(min-width:991px){
         display: flex;
         flex-direction: column;
-        position: absolute;
-        z-index: 100;
-        width: 80%;
+        position: fixed;
+        width: 220px;
+        top:200px;
         left: 25px;
-        top:9px;
         .hr-devis{
             margin-top: 1rem;
             margin-bottom: 1rem;
